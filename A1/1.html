@@ -1,0 +1,346 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>CS 136 Assignment 1</title>
+</head>
+<body>
+<h1>CS 136 Assignment 1</h1>
+<p>
+Due Friday, January 23 at 11:59 AM (noon). 
+</p><hr>
+<p>
+Make sure you read the <a href="https://www.student.cs.uwaterloo.ca/%7Ecs136/assignments/a1/preamble.shtml">assignment preamble</a>.
+Also monitor the <a href="https://piazza.com/class/i3g6q2yjffi6td?cid=84"> official Piazza post</a> regularly for updates and FAQ.
+</p><hr>
+You do not have to use the Seashell environment for this assignment.  
+You can use DrRacket, but you must use "full Racket" (determine language from source) 
+and each of your files must start with <tt>#lang racket</tt>
+<hr>
+<h3>Assignment 1 Problem 0. <i>[5 Marks correctness]</i></h3>
+<strong>Problem 0 is a "warm-up" question.  You are allowed to collaborate with your fellow classmates and discuss strategy on piazza.</strong>
+
+<ol type="a">
+  <li>Write a Racket module <tt> consecutive-letters.rkt </tt> that provides a predicate function <tt> has-same-consecutive-letter? </tt> that has a single lower-case string parameter <tt> str </tt> and produces <tt> #t </tt> if <tt> str </tt> contains two consecutive letters that are the same, <tt> #f </tt> otherwise.<br>
+  <em>Public test samples:</em><br>
+  <tt> (has-same-consecutive-letter? "better") =&gt; #t </tt><br>
+  <tt> (has-same-consecutive-letter? "beware") =&gt; #f </tt><br><br>
+
+  </li><li>Write a Racket module <tt> list-range.rkt </tt> that provides a function <tt> list-range </tt> that has two integer parameters <tt> a </tt> and <tt> b </tt>
+  (where <tt>a</tt> &lt;= <tt>b</tt>) and produces a list of all integers from <tt> a...b </tt> (inclusive). The list must be in ascending order.<br>
+  <em>Public test sample:</em><tt> (list-range 2 5) =&gt; '(2 3 4 5) </tt><br><br>
+
+  </li><li>Write a Racket module <tt> list-letter-range.rkt </tt> that provides a function <tt> list-letter-range </tt> that has two parameters <tt>l1</tt> and <tt>l2</tt> where both <tt>l1</tt> and <tt>l2</tt> are lowercase letters (between 'a' and 'z') and <tt>l1</tt> precedes <tt>l2</tt> alphabetically.  The function produces a list of characters from <tt>l1...l2</tt> (inclusive).  The list must be in alphabetically order. <br>
+  <em>Public test sample.</em><tt> (list-letter-range #\d  #\g) =&gt; '(#\d #\e #\f #\g) </tt><br><br>
+
+  </li><li>Write a Racket module <tt> intersect0.rkt </tt> that provides a function <tt> slon-intersect </tt> that has two parameters<tt> slon1 </tt> and <tt> slon2 </tt>
+ that are both lists of numbers sorted in ascending order, and produces a
+ sorted list of numbers (in ascending order) that contains all numbers 
+that appear in <strong>both</strong> <tt> slon1 </tt> and <tt> slon2 </tt>.  You may assume that <tt> slon1 </tt> does not contain any duplicate elements, and neither does <tt> slon2</tt>.<br>
+  <em>Public test sample:</em><tt> (slon-intersect '(1 2 3) '(2 3)) =&gt; '(2 3) </tt><br><br>
+  
+  </li><li><em>(familiarize yourself with Problem 4 below first)</em>.<br>
+  Write a Racket module <tt> uw-tools0.rkt </tt> that provides a function <tt> cur-temp </tt> that has no parameters and produces the current temperature at the University of Waterloo (in Celsius).<br>
+  <em>For example:</em><tt> (cur-temp) =&gt; -11.5 </tt><br><br>  
+  
+</li></ol>
+
+<hr>
+<strong>The remaining questions are to be completed individually, 
+without any assistance from online sources or anyone who is not part of 
+the CS 136 staff (ISAs, IAs, Instructors).  Any posts on piazza must be 
+for clarification only.  Do not discuss or hint at tricky test cases on 
+piazza publically.</strong>
+<hr>
+<h3>Assignment 1 Problem 1. <i>[15 Marks correctness, 10 hand marking marks]</i></h3>
+For this question, the Racket module <a href="https://www.student.cs.uwaterloo.ca/%7Ecs136/assignments/a1/card-deck.rkt"><tt>card-deck.rkt</tt></a>
+ is given (it will appear in Seashell in the directory for this 
+question).  The module has two functions already defined for you to use 
+in your application module: <tt>build-deck</tt> and <tt>shuffle-deck</tt>. In this question you will write a module that will use the functions within the <tt>card-deck.rkt</tt> module.<br><br>
+
+First, modify and complete <tt>card-deck.rkt</tt> so that it:
+<ul>
+	<li>provides the functions already defined (that are intended to be used by other modules),
+	</li><li>provides functions that will produce the value of each field in the card structure
+	</li><li>has all the appropriate documentation and formatting
+</li></ul>
+<p>Remember to follow good programming practices as described in the course notes and the <strong>new</strong> <a href="https://www.student.cs.uwaterloo.ca/%7Ecs135/handouts/style.pdf">Style Guide</a>.
+
+</p><p>Next, write a new Racket module <tt>separate-by-suit.rkt</tt> that provides a function <tt>separate-by-suit</tt> that will:
+</p><ol>
+	<li>use <tt>get-number</tt> (from module <tt>numbers1.rkt</tt> described below) to get a number <tt>n</tt>
+	</li><li>shuffle <tt>n</tt> cards in the deck
+	</li><li>separate the shuffled deck into 4 piles (one for each suit)
+</li></ol>
+The function <tt>separate-by-suit</tt> has <strong>no</strong> 
+parameters and produces a list of 4 lists of cards (one for each suit) -
+ each of the 4 lists will contain the cards all with the same suit.  The
+ 4 suit lists are ordered by the order of the first card of each suit in
+ the shuffled deck; i.e. if the first card is a club, then the first 
+list will contain all the clubs, etc.  The cards within each suit list 
+are ordered by rank as they appear in the shuffled deck.
+
+<p>The module, <tt>numbers1.rkt</tt>, provides a function <tt>get-number</tt> that your program must use to determine how many cards in the deck will be shuffled. 
+Your function should only call <tt>get-number</tt> once; however, for testing purposes you may call it again. Successive calls to <tt>get-number</tt> will produce a number; when it runs out of numbers it will produce <tt>#f</tt>.
+
+</p><p>At the end of the <tt>separate-by-suit.rkt</tt> module add the top-level function application: <tt>(separate-by-suit)</tt>.
+  In your past programming assignments, we simply asked you to develop 
+functions and our testing program would have
+function applications to test them.  In this module, the top-level 
+expression will begin the execution of your function (i.e. so when you 
+press the "RUN" button in Seashell (or DrRacket), the program will begin
+ and you will see the execution results in the console (or interactions 
+window in DrRacket).
+</p><hr>
+
+<h3>Assignment 1 Problem 2. <i>[15 Marks correctness]</i></h3>
+Many games are variations of robots in an arena (question inspired by <a href="http://en.wikipedia.org/wiki/RoboRally">Roborally</a>).
+In this question you will implement a module that can be used to help build a similar but very basic game.
+
+The arena is a 100 by 100 grid of squares with the origin in the bottom left corner as illustrated below:
+<br><br>
+<table border="1">
+	<tbody><tr><td> (1,100) </td><td> (2,100) </td><td>  . . . </td><td> (100,100) </td></tr>
+	<tr><td> . . . </td><td> . . . </td><td> . . . </td><td> . . . </td></tr>
+	<tr><td>(1,2)</td><td>(2,2)</td><td> . . . </td><td>(100,2)</td></tr>
+	<tr><td>(1,1)</td><td>(2,1)</td><td> . . . </td><td>(100,1)</td></tr>
+</tbody></table>
+<br>
+A robot in the arena will occupy one of the above squares - valid arena locations are stored in type <tt>Arena-Posn</tt>.
+
+<p>Given the following <tt>robot</tt> structure: <tt>(define robot (name orientation location speed))</tt>,
+write a racket module <tt>robot.rkt</tt> that provides the following three functions:
+</p><ol type="a">
+	<li><strong><tt>create-robot</tt></strong> has 5 parameters with the following types: Str, Sym (one of <tt>{'North, 'East, 'South, 'West})</tt>), Nat, Nat, Nat and produces the corresponding <tt>robot</tt>.
+	</li><li><strong><tt>move-robot</tt></strong> consumes a <tt>robot</tt> and a list of robot movements (each movement is one of <tt>{'L, 'R, 'F, 'B}</tt> - described below) and produces the <tt>robot</tt> resulting after applying all the movements from the list (in order starting with the first item in the list).
+	</li><li><strong><tt>sighted-robots</tt></strong> has two <tt>robot</tt> parameters and produces either <tt>empty</tt>, a list of one <tt>robot</tt> or a list of two <tt>robot</tt>s.  A robots can <em>see</em> along the horizontal or vertical grid cells from their location in the direction they are orientated.
+	For example, a robot located at <tt>(4, 5)</tt> oriented <tt>'East</tt> can <em>see</em> grid cells <tt>(5,5),(6,5), ..., (100,5)</tt>.
+	The produced list contains all the robots that can be seen by another robot.	
+</li></ol>	
+
+A robot may perform the following movements:
+<ul>
+	<li><tt>'L</tt> is turn-left
+	</li><li><tt>'R</tt> is turn-right
+	</li><li><tt>'F</tt> is move-forward
+	</li><li><tt>'B</tt> is move-backward
+</li></ul>
+The robot's orientation is the direction the robot is facing - one of the four compass directions <tt>{'North, 'East, 'South, 'West}</tt>.
+The robot can only turn at 90 degree increments. So, if facing <tt>'North</tt>, a right turn would change the orientation to <tt>'East</tt>
+or a left turn would change the orientation to <tt>'West</tt>.
+
+<p>The robot's location is stored as an <tt>Arena-Posn</tt>.  You may 
+assume the compass directions are mapped to the Cartesian plane in the 
+natural way (north is the positive y axis, east is the positive x axis, 
+etc).
+A move forward (or move backward) will change the location of the robot 
+in the (opposite) direction that it is oriented.  
+The robot will move a distance specified by its <tt>speed</tt>.
+
+</p><p>You do not have to worry about robot collisions;  however, <strong>robots are not allowed to leave the arena</strong>.
+  If a robot's movement extends outside the defined indices of the 
+arena, reduce the movement so that the robot travels as far as possible 
+without leaving the arena (i.e. the robot runs into a wall and cannot 
+move through it).   
+
+</p><p>Note (<strong>You are not responsible for implementing this part</strong>
+ (yet?)): a basic 2-player game of Robot Arena would start each robot in
+ opposite corners.  Then, show the arena layout to the players, ask each
+ player for a sequence of 5 movements, move the robots, and determine 
+the sighted robots.
+A robot that has been sighted is fired upon and exterminated.  Rounds 
+repeat these steps until only one robot remains.
+
+</p><hr>
+<h3>Assignment 1 Problem 3. <i>[10 Marks correctness]</i></h3>
+Many other games (such as Concentration or Memory games) are dependent 
+on storing a value at each location of a rectangular playing board that 
+is partitioned into
+squares (similar to a 2-dimensional grid).  Each square on the playing 
+board has a unique (row, column) position.   We will orient our playing 
+board with the origin in the bottom left corner (similar to Problem 2). 
+ A playing board that has 2 rows and 3 columns looks as follows:
+<br><br>
+<table border="1">
+	<tbody><tr><td></td><td>Col 1</td><td>Col 2</td><td>Col 3</td></tr>
+	<tr><td>Row 2</td><td>(2,1)</td><td>(2,2)</td><td>(2,3)</td></tr>
+	<tr><td>Row 1</td><td>(1,1)</td><td>(1,2)</td><td>(1,3)</td></tr>
+</tbody></table>
+<br>
+ 
+A module <tt>numbers3.rkt</tt> (similar to Problem 1), provides a function <tt>get-number</tt> that you will use to obtain the dimensions of the
+playing board and to initialize the value for each square.  The first call to <tt>get-number</tt> produces the number of rows on the playing board.
+The second call to <tt>get-number</tt> produces the number of columns on the playing board.  Subsequent calls to <tt>get-number</tt>
+ produce the value stored at each square on the playing board, in the 
+order: (row 1, column 1), (row 1, column 2), ..., (row 2, column 1), 
+(row 2, column 2), ..., and so on.  
+
+<p>Reminder: For testing the correctness of your program, we will change the playing board dimensions and values in the <tt>numbers3.rkt</tt> module.  If properly implemented, your module will still work appropriately. 
+
+</p><p>In this question, your module will need to store the values of 
+the playing board as a constant.  How you wish to do so (in a list or a 
+structure, etc) is an implementation detail left up to you.  You may 
+also create other constants.
+
+</p><p>Write a Racket module <tt>playboard.rkt</tt> that provides the following functions:
+
+</p><ol type="a">
+	<li><strong><tt>lookup</tt></strong> has two parameters <tt>row</tt> and <tt>col</tt>, representing the square at (<tt>row</tt>, <tt>col</tt>) on the playing board, and produces the value stored at this square or <tt>#f</tt> if the row or col arguments are outside the dimensions of the playing board. 
+	</li><li><strong><tt>match?</tt></strong> has four parameters <tt>row1</tt>, <tt>col1</tt>, <tt>row2</tt> and <tt>col2</tt> representing 2 squares (<tt>row1</tt>, <tt>col1</tt>) and (<tt>row2</tt>, <tt>col2</tt>) on the playing board and produces <tt>#t</tt> if the values of the two squares match; <tt>#f</tt> otherwise.
+</li></ol>
+
+Note (<strong>You are not responsible for implementing this part</strong>
+ (yet?)): To check for a winning solution to the memory game, you could 
+write a function that consumes a list of pairs of square coordinates 
+then checks that each pair of squares represent different squares but 
+store the same value and all the squares on the board are accounted for 
+in the list.  If so, you have won the game.
+
+<hr>
+<h3>Assignment 1 Problem 4. <i>[40 Marks correctness, 10 marks style (hand marking)]</i></h3>
+
+An <a href="http://en.wikipedia.org/wiki/Api">Application Programming Interface (API)</a> is an <strong>interface</strong> to a program (application).  The program may even be running on a different computer (e.g., on the internet).
+
+<p>
+We have designed a module <tt><a href="https://www.student.cs.uwaterloo.ca/%7Ecs136/assignments/a1/uw-api.rkt">uw-api.rkt</a></tt> that provides a Racket interface for using the <a href="https://github.com/uWaterloo/api-documentation">uWaterloo API</a>. This API allows programmers to access and gather information from the University of Waterloo's websites. 
+
+</p><p>
+You must write a module <tt>uw-tools.rkt</tt> that requires our uw-api 
+module and provides more "user friendly" functions to gather this 
+information. The purpose of this assignment question is to give you 
+practice using an API and working with interfaces. These skills are 
+essential to modern programming, and will be widely used throughout the 
+remainder of the course.
+
+</p><p><strong>TIPS: </strong>
+</p><ul>
+<li>These questions may seem daunting, but they are all just dealing with lists, strings and numbers in different ways.
+</li><li>You may find the following functions handy: <tt>number-&gt;string</tt>, <tt>string-&gt;number</tt>, <tt>substring</tt>, <tt>string-append</tt>.
+</li><li>It is best to just play around providing different values to <tt> uw-api </tt> in the DrRacket interactions window to see what kind of values it produces.
+</li><li>Some of the values produced by the API calls will be lists of lists of lists
+</li><li>A few of the questions will require you to explore the <a href="https://github.com/uWaterloo/api-documentation">uWaterloo API documentation</a> to see what is available.
+</li><li>Think carefully about what helper functions will make your life easier.
+</li></ul>
+
+<p>
+The types of the parameter name types are as follows:
+</p><ul> 
+  <li><tt>subject</tt> is a non-empty string that is a UW subject (e.g., "CS" or "MATH").
+  </li><li><tt>catalog</tt> is an integer corresponding the course number (e.g., the catalog
+  number for this course is <tt>136</tt>).
+  </li><li><tt>term</tt> is a 4-digit integer that uses UW's term 
+numbering system (see /terms/list in the api).  If you're curious, the 
+first digit is always 1, the next two digits are the year, and the last 
+digit is the starting month of the semester (W = 1, S = 5, F = 9), so 
+W14 is 1141.
+  </li><li><tt>section</tt> is a 7-character string corresponding to a course section (e.g., "LEC 001" or "TST 201").
+  </li><li><tt>date</tt> is a 10-character string in YYYY-MM-DD format (e.g., "2014-01-10")
+  </li><li><tt>building</tt> is a non-empty string corresponding to a campus building (e.g., "MC")
+  </li><li><tt>room</tt> is an integer corresponding to a room number (e.g., 4059)
+  </li><li><tt>day</tt> is a 1 or 2 character string that is one of: "M", "T", "W", "Th", "F"
+  </li><li><tt>time</tt> is a 5 character string in 24-hour format (e.g., "13:30")
+  
+</li></ul>
+
+<p>
+The functions you must provide are as follows:
+
+</p><ol type="a">
+  <li><strong>(course-desc subject catalog)</strong> produces a string with the calendar <em>"description"</em> of the course.  <br>For example, <tt>(course-desc "CS" 136) =&gt; "This course builds..."</tt><br><br>
+  
+  </li><li><strong>(online? subject catalog)</strong> produces #t if the course is available online (or is only available online), and #f otherwise.<br>For example, <tt>(online? "CS" 136) =&gt; #f</tt><br><br>
+  
+  </li><li><strong>(course-sections term subject catalog)</strong> produces a list of strings that correspond to the section names for the course (see /terms/../../../schedule).  <br>For example, <tt>(course-sections 1141 "CS" 136) =&gt; '("LEC 001" "LEC 002" ... "TST 201")</tt><br><br> 
+  
+  </li><li><strong>(course-capacity term subject catalog)</strong> 
+produces a list of lists illustrating how "full" a course is.  For each 
+"LEC" section, it must produce a list with 3 items: the section, the 
+enrollment_capacity and the enrollment_total (number of students in the 
+class).  <br>For example, <tt>(course-capacity 1141 "CS" 136) =&gt; 
+  <br>'(("LEC 001" 94 83) ... ("LEC 006" 94 83))</tt><br><br>   
+  
+  </li><li><strong>(section-info term subject catalog section)</strong> produces a single string with information about a particular section.  
+  To illustrate, <br><tt>(section-info 1141 "CS" 136 "LEC 001") =&gt; 
+  <br>"CS 136 LEC 001 08:30-09:50 TTh QNC 2502 Professor Smith"</tt><br><br>
+  The format of the string must be:
+  <br><tt>"[SUBJECT] [CATALOG] [SECTION] [start_time]-[end_time] [weekdays] [building] [room] [instructor]"</tt><br><br>
+  Note: if a section has multiple 'courses' (e.g., MATH 118) use the first class<br>
+  Note: if a section has multiple instructors (e.g., CS 458) use the first instructor<br><br>
+
+  </li><li><strong>(next-holiday date)</strong> produces a string with 
+the next holiday on or after the date provided.  The string must contain
+ the date of the holiday followed by a space and then the name of the 
+holiday<br>For example, <tt>(next-holiday "2014-01-10") =&gt; "2014-02-16 Family Day"</tt><br><br>
+  
+  </li><li><strong>(room-status building room day time)</strong> 
+produces a string that displays the course in the room at that day and 
+time, or "FREE" if the room is not in use. To illustrate, <br>
+  <tt>(room-status "RCH" 112 "T" "11:20") =&gt; "CS 136 Elementary Algorithm Design and Data Abstraction"</tt><br>
+  <tt>(room-status "RCH" 112 "Th" "11:21") =&gt; "FREE"</tt><br>
+  <br>
+  The format of the string must be:
+  <br><tt>"[SUBJECT] [CATALOG] [DESCRIPTION]"</tt><br><br>
+
+  <strong><i>fun idea (not required): write a function that takes a list of your classes and produces your schedule.</i></strong><br><br>
+  <strong><i>fun idea (not required): write a function that checks a 
+list of rooms (e.g., rooms in MC) and displays which rooms are currently
+ free.</i></strong><br><br>  
+  
+</li></ol>
+
+<p>
+Note: You may assume the inputs are valid, and you do not have to handle any errors.
+
+</p><p>
+Note: You must not assume the results from <tt>uw-api</tt> appear in any particular order.
+
+</p><p>
+Note: For our marmoset testing, we will be using a different uw-api
+module that has an identical interface, but may produce different results. Your 
+code must depend only on what the uw-api specifies, and not on the exact output
+it produces. APIs may often change their implementations, but as long as you write
+code that depends only on the interface, your code will continue to work.
+
+</p><p>
+Note: The uw-api module requires another module named <a href="http://en.wikipedia.org/wiki/Json">JSON</a>.  If you receive the following error: <tt>"json: standard-module-name-resolver: collection not found"</tt> error, you may have to update your version of Racket.  If you are unable to do so, download the module: <tt><a href="https://www.student.cs.uwaterloo.ca/%7Ecs136/assignments/a1/json.rkt">json.rkt </a></tt> and place it in the same directory (folder) as your <tt>uw-api.rkt</tt> module.  Then, modify your <tt> uw-api.rkt </tt> file and change 
+<tt>(require json) </tt> to <tt>(require "json.rkt")</tt> 
+
+</p><hr>
+
+<h3>Assignment 1 BONUS Question. <i>[up to 10 Marks]</i></h3>
+
+<p>Write a module <b>"a1bonus.rkt"</b> that requires <a href="https://www.student.cs.uwaterloo.ca/%7Ecs136/assignments/a1/uw-api.rkt">uw-api.rkt</a>
+ and provides a function that uses the uw-api. Your function must be 
+something you think your fellow students would find "useful", or at 
+least "fun" or "interesting".
+</p><p>
+Your grade will be one of:
+</p><p>
+<lu>
+</lu></p><li>
+<b>No Bonus.</b> +0 Marks. Poor documentation, buggy / doesn't work, far too trivial
+</li><li>
+<b>Good.</b> +1-3 Marks.
+</li><li>
+<b>Excellent.</b> +4-7 Marks
+</li><li>
+<b>Outstanding.</b> +7-10 Marks
+
+<p>
+<b>Requirements.</b> You must provide a few examples (as comments) in your interface.
+You can use any function in the Racket language, including any of the Racket modules that are packaged with DrRacket.
+</p><p>
+<b>Marking.</b>
+The marks will be determined subjectively by the course staff relative 
+to other submissions. Your submission may be graded "No Bonus" or "Good"
+ based solely on the interface documentation provided and without ever 
+being run. There will be no automarking.
+</p><p>
+<b>Collaboration</b>
+As with all non-warm-up questions, no collaboration is allowed.
+<b>Note:</b> the course staff will not provide any assistance with the bonus question.
+</p><p>
+Please watch Piazza for possible updates.
+</p><hr>
+
+
+
+
+</li></body></html>

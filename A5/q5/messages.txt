@@ -1,0 +1,35 @@
+Victory messages:
+
+"Scissors cut paper."
+"Paper covers rock."
+"Rock crushes lizard."
+"Lizard poisons Spock."
+"Spock smashes scissors."
+"Scissors decapitate lizard."
+"Lizard eats paper."
+"Paper disproves Spock."
+"Spock vaporizes rock."
+"Rock crushes scissors."
+
+Followed by a space, and then one of:
+
+"Bot wins!\n"
+"Player wins!\n"
+
+NOTE: if player & bot throw the same, just display:
+"It's a tie!\n"
+
+Other useful things to cut & paste:
+
+"Choose a challenge rating (1 - 1000000): "
+"What do you throw (r/p/s/l/k)? "
+"Would you like to play again (y/n)? "
+
+"----- Game Summary -----\n"
+"Player won %d rounds...\n"
+"Bot won %d rounds...\n"
+"Player and bot tied %d rounds...\n"
+
+"Bot wins!\n"
+"Player wins!\n"
+"It's a tie!\n"

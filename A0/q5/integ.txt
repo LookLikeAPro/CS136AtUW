@@ -1,0 +1,32 @@
+DO NOT ALTER THIS FILE EXCEPT IN THE FOLLOWING TWO WAYS:
+
+* Replace each of the following X's with one of A,B,C,D,E,T,F
+* replace YOURUSERID with your user id in the last line:
+
+Question 1: D
+Question 2: B
+Question 3: A
+Question 4: E
+Question 5: E
+Question 6: T
+Question 7: T
+Question 8: F
+Question 9: T
+Question 10: T
+Question 11: T
+Question 12: T
+Question 13: D
+Question 14: A
+Question 15: C
+Question 16: D
+Question 17: C
+
+Your "signature" below indicates you understand and have complied with 
+UW policy, including: 
+
+* I declare that all of the program code I will submit will be my original work. 
+
+* I will neither give nor receive an electronic copy or a printed version of any part of my code. 
+
+Course: CS 136
+Student (Quest) userid: j222zhou

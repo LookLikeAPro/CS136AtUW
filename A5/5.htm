@@ -1,0 +1,352 @@
+﻿<html><!--
+ Archive processed by SingleFile 
+ url: https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/ 
+ saved date: Thu Apr 02 2015 13:35:25 GMT-0400 (EDT) 
+--><!--
+ Archive processed by SingleFile 
+ url: https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/ 
+ saved date: Thu Apr 02 2015 13:35:25 GMT-0400 (EDT) 
+--><head><title>CS 136 Assignment 5</title>
+<link type="image/x-icon" rel="shortcut icon" href="data:image/x-icon;base64,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/////////////////////////////////////////////////////////////////////////////////////////////////////////////////8wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="></head>
+<body>
+<h1>CS 136 Assignment 5</h1>
+<p>Updated Wed, Feb 18:  Fixed version of frac.h</p>
+<p>Due Friday, Feb 27 at 11:59 AM sharp (noon).</p>
+<p>Please read the preamble in <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a1/preamble.shtml">Assignment 1</a>.</p>
+<p>In this assignment, <strong>Only the C language features introduced up to the end of Section 07 are allowed.</strong></p>
+<strong>Notes:</strong>
+<ul>
+<li>For this and future assignments make sure your output is exactly as specified in the question.  Extra whitespace or newline characters could cause you to fail all of the basic and correctness tests in marmoset.</li>
+<li>For this and future assignments, you should assert all required restrictions on the parameters of your functions, when appropriate.</li>
+<li>You are not allowed to make any change to the interface files (with extensions <tt>.h</tt>) provided in this assignment unless otherwise explicitly permitted</li>
+<li>You are <strong>not</strong> allowed to use the standard math library (<tt>math.h</tt>) for this assignment.</li>
+<li>Unless otherwise stated, you are <strong>not</strong> allowed to declare any new global mutable variables.</li>
+<li>Unless otherwise stated, you do not have to worry about unexpected EOFs.</li>
+<hr>
+
+<h3>Assignment 5 Problem 0. <i>[1+2+1+1 = 5 Marks for correctness]</i></h3>
+<strong>Problem 0 is a "warm-up" question.  You are allowed to collaborate with your fellow classmates and discuss the solution on piazza.</strong>
+
+<ol type="a">
+<li><strong>[1 Mark.  File: randnum.c]</strong><br> Write a C module <tt>randnum.c</tt> that provides a <tt>randnum</tt> function:<br>
+<tt>int randnum(void);</tt><br>
+That returns a random integer between 5 and 20 (inclusive).  You must use the built-in <tt>rand()</tt> function and must use an <strong>initial</strong> seed of <tt>1234</tt> (seed only once).<br>
+See Problem 3 for more information on the <tt>rand()</tt> function and seeds<br>
+<p><em>Example:</em><br>
+The first two calls to <tt>randnum()</tt> must return 19 and 8.<br><br>
+You do not need to create or submit a <tt>randnum.h</tt> file<br><br>
+
+Note: You are allowed to define global mutable variables this problem (and yes, that is a hint).
+</p></li>
+
+<li><strong>[2 Marks.  File: addsqr.zip containing addsqr.in, addsqr.expect, and addsqr.c]</strong><br> 
+We have provided you with <tt><a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/addsqr.h">addsqr.h</a></tt> and <tt><a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/test-addsqr.c">test-addsqr.c</a></tt> from slides 17 and 18 of Section 07.
+You are to create the implementation file <tt>addsqr.c</tt> as well as the SeaShell test files <tt>addsqr.in</tt> and <tt>addsqr.expect</tt>.  The .in and .expect files must contain the input and output from slide 19, and your implementation must pass this test.<br><br> 
+
+Note:  Yes, this is very easy.  Watch for whitespace issues.</li>
+
+<li><strong>[1 Mark.  File: train.c]</strong><br> You are given a program <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/train.c">train.c</a> that draws a train using ASCII characters. Modify this program to be more interactive.
+
+The resulting program must, before printing, read in three integers. These integers are  printed on the train, one on each car. The printed integers must be right aligned, with one space between the integer and the character '|' at the end of the car.  There are two space characters after the train, all lines have the same number of characters, and all lines end with a newline character.
+
+<p><em>Example:</em><br>
+(<a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/train_1.in">train_1.in</a>)<br>
+(<a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/train_1.expect">train_1.expect</a>)<br>
+<br>
+(<a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/train_2.in">train_2.in</a>)<br>
+(<a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/train_2.expect">train_2.expect</a>)<br>
+</p></li>
+
+You can assume that the integers will not be longer than 5 digits. <br><br>
+
+Tip: to avoid worrying about whitespace, use multiple calls to <tt>scanf</tt> to read in integers one at a time. <br>
+
+Tip: To print a right-aligned integer that always takes up 5 spaces, use "%5d".<br><br>
+
+
+<li><strong>[1 Mark.  File: getpos.c]</strong><br> Write a C module <tt>getpos.c</tt> that provides the following function:<br>
+<code>
+// getpos(p) reads in two integers and stores them in p-&gt;x and p-&gt;y<br>
+// requires: p is not NULL<br>
+void getpos(struct posn *p);<br>
+</code><br>
+Use the following definition of <tt>struct posn</tt>:<br>
+ <tt>struct posn { int x; int y; };</tt><br><br>
+You do not need to create or submit a <tt>.h</tt> file (so you need to put the struct definition in your <tt>getpos.c</tt> file).
+</li>
+</ol>
+
+<hr>
+
+<h3>Assignment 5 Problem 1. <i>[2*5 Marks for correctness]</i></h3>
+
+<ol type="a">
+  <li> <strong>[5 Marks for correctness.  File: apowb.c]</strong><br>Write a C module <tt>apowb.c</tt> that provides a C function <tt>bool is_apowb(int a, int b, int *e)</tt> that determines if <tt>a</tt> is a power of <tt>b</tt>;  i.e. there exists some integer exponent <tt>x</tt>
+such that <tt>b</tt> to the power of <tt>x</tt> is equal to <tt>a</tt>.  If <tt>a</tt> is a power of <tt>b</tt>, <tt>*e</tt> is set to the exponent <tt>x</tt> and the function returns <tt>true</tt>.  Otherwise it returns <tt>false</tt> and does not alter <tt>*e</tt>.  In the case where <tt>a==b</tt> use <tt>*e=1</tt> even if other values also work.  It may be helpful to remember that n<sup>0</sup> = 1 for all n, and 0<sup>n</sup> = 0 for all n other than 0.<br>
+Note:  You can <strong>not</strong> use recursion for this problem. 
+
+<br><br>
+Sample basic test:<br><br>
+<code>
+int e;<br>
+assert(is_apowb(8,2,&amp;e));<br>
+assert(e == 3);<br>
+assert(is_apowb(9,-3,&amp;e));<br>
+assert(e == 2);<br>
+assert(!is_apowb(8,-2,&amp;e));<br>
+assert(e == 2);<br>
+</code><br>
+</li>
+
+  <li> <strong>[5 Marks for correctness.  File: reverse.c]</strong><br>Write a C module <tt>reverse.c</tt> that provides the <tt>reverse</tt> function as shown below, but implemented with <strong>iteration</strong>, not recursion.  Unlike the recursive version below, you may <strong>not</strong> define any helper functions.
+<code><br><br>
+int reverse_acc(const int a, const int rev_so_far);<br>
+// reverse(a) returns the value that you would get if you reverse the <br>
+//    decimal digits of the integer a <br>
+// eg: reverse(12345) == 54321<br>
+// requires:a is positive and has at most 9 digits in decimal<br>
+int reverse(const int a) {<br>
+&nbsp;&nbsp;return reverse_acc(a,0);<br>
+}<br>
+<br>
+// reverse_acc(a,rev_so_far) returns the value you would get if you reversed <br>
+//    the digits of a, and put them to the right of rev_so_far<br>
+// eg: reverse(12,543) == 54321<br>
+// requires: a and rev_so_far are positive, and have at most 9 digits in total<br>
+int reverse_acc(const int a, const int rev_so_far) {<br>
+&nbsp;&nbsp;if (a &lt;= 9) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 10*rev_so_far + a;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return reverse_acc(a / 10, rev_so_far * 10 + a % 10);<br>
+}
+</code><br><br>
+
+Sample basic test:<br><br>
+<code>
+assert(reverse(54321) == 12345);<br>
+assert(reverse(10000) == 1);<br>
+</code><br></li>
+</ol>
+<hr>
+
+<h3>Assignment 5 Problem 2. <i>[10 Marks correctness + 10 Marks handmarking File: frac.c]</i></h3>
+Write a module <tt>frac.c</tt> for dealing with rational numbers (fractions).  Follow interface provided for you in <tt><a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/frac.h">frac.h (updated Wed, Feb 18)</a></tt>.
+<br><br>
+Sample Public Test:<br>
+<code>
+struct frac a = frac(1,8);<br>
+struct frac b = frac(3,8);<br>
+struct frac c = frac(1,2);<br>
+fr_add(&amp;a,&amp;a,&amp;b); // a = a + b<br>
+assert(fr_equal(&amp;a,&amp;c)); <br>
+fr_reduce(&amp;a);<br>
+assert(a.num == 1 &amp;&amp; a.denom == 2);<br>
+</code><br><br>
+
+Notes:  <strong>Do not modify the interface file</strong> as we will mark your code using our own version.  You must use <strong>iteration</strong> not recursion for any repetition.  You can assume that you will not be given fractions that will result in overflow in the final answer, i.e. any time you are given two fractions, the lowest common denominator will not overflow (and in the case of addition, their sum will also not overflow the numerator).  You must take care to avoid overflow in your intermediate calculations.
+
+<!--
+Write a module <tt>squares.c</tt> that provides the following function:<br/><br/>
+<code>
+// squares_table(a,b,step) prints a table of the squares of <br/>
+//    a, a + step, a + 2*step, ... up to and possibly including b.<br/>
+// requires: 0 <= a <= b <= 46340<br/>
+//           step > 0<br/>
+void squares_table(int a, int b, int step);
+</code>
+<br/><br/>
+The table will have two columns.  The first, labelled x, will be the integers from a to b.  The second, labelled x^2, will be their squares.
+Each column is  wide enough to hold the largest value in the range, plus 1 (one) space on either side (padding).  The numbers must be right aligned,
+as must the column labels.  
+<br/><br/>
+Examples: <br/>
+
+<tt>squares_table(0,10,1);</tt> will print the table shown in <tt><a href="square_table_0_10_1.txt">square_table_0_10_1.txt</a></tt><br/>
+<tt>squares_table(0,1000,200);</tt> will print the table shown in <tt><a href="square_table_0_1000_200.txt">square_table_0_1000_200.txt</a></tt><br/>
+<br/>
+Things to note in the examples:  There are no trailing whitespaces.  That is, each line has a newline character immediately after the last visible character.  Make sure you have enough dashes and they are in the right spots.
+<br/><br/>
+Warning:  Seashell can become unresponsive when printing too many lines of text.  You can limit yourself to inputs that print no more than 20 lines of text.
+<br/><br/>
+Tip:  The "%5d" trick from the warmup will not work here because the amount of padding needed will depend on the inputs!  Try something else
+-->
+<hr>
+
+<h3>Assignment 5 Problem 3. <i>[20 Marks correctness File: mgame.c]</i></h3>
+For this problem, you will write a C program <tt>mgame.c</tt> that is an interactive teaching aid to help grade 3 students with their multiplication skills. You will need to use the functions <tt>rand</tt> and <tt>srand</tt>, which you can find out more about <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/rand.shtml">here</a>. The purpose of this problem is to give you practice writing interactive programs.
+
+The program must operate as follows:<br><br>
+  <strong>Step 1: (multiplication question)</strong><br>
+  Generate a random number y and then a random number z in the range [1,10] (inclusive).<br>
+  If you seeded correctly (see the link above) and computed y and z correctly, the first time you run your program, y will be 5, and z will be 10.<br>
+  You must then prompt the user with <tt>"y X z = "</tt>, for example:<br>
+  <tt>"5 X 10 = " </tt> (space after =, no newline)<br>
+  and then read in an integer response (with <tt>scanf</tt>).
+  If the response is correct, proceed to step 4, otherwise proceed to step 2.<br><br>
+  
+  <strong>Step 2: (first guess is incorrect)</strong><br>
+  Generate a random number r in the range [0,2] and display the corresponding message:<br>
+  0: <tt>"Incorrect.\n"</tt><br>
+  1: <tt>"That is not right.\n"</tt><br>
+  2: <tt>"That is wrong.\n"</tt><br>
+  and then re-prompt the user for a second chance and read in another response:<br>
+  <tt>"Try again: y X z = " </tt> (space after =, no newline)<br>
+  If the response is correct, proceed to step 4.<br><br>
+
+  <strong>Step 3: (second guess is incorrect)</strong><br>
+  Increment the number of incorrect answers, and display the answer using the following message:<br>
+  <tt>"Sorry.  The correct answer is y X z = %d\n"</tt><br>
+  proceed to step 5.<br><br>
+  
+  <strong>Step 4: (response is correct)</strong><br>
+  Increment the number of correct answers, and then generate a random number r in the range [0,2] and display the corresponding message:<br>
+  0: <tt>"Give me five!\n"</tt><br>
+  1: <tt>"Keep up the good work!\n"</tt><br>
+  2: <tt>"Way to go!\n"</tt><br>
+  Proceed to step 5.<br><br>
+  
+  <strong>Step 5: (continue ?)</strong><br>
+  Prompt the user with:<br>
+  <tt>"Would you like to continue (y/n)? "</tt> (space after ?, no newline)<br>
+  and then read in a response (with <tt>scanf</tt>) until a <tt>'y'</tt> or <tt>'n'</tt> is read.
+  If <tt>'y'</tt>, proceed to step 1.<br><br>
+  Otherwise, proceed to step 6. <br><br>
+  
+  <strong>Step 6: (game over)</strong><br>
+  Display the following statistics:<br>
+  <code>
+  "----- Session Summary -----\n"<br>
+  "Correct answers: %d\n"<br>
+  "Incorrect answers: %d\n"<br>
+  "Percentage correct: %.2f%%\n"<br>
+  </code>
+  Note that the percentage of correctly answered questions must be calculated using a float, and must be displayed to two decimal places using the placeholder above.<br><br>
+   
+   If implemented correctly, you will be able to duplicate the following interactions (<strong>bold</strong> denotes input, otherwise output):
+  <br><br>
+  <code>
+5 X 10 = <strong>50</strong><br>
+Give me five!<br>
+Would you like to continue (y/n)? <strong>y</strong><br>
+8 X 1 = <strong>81</strong><br>
+Incorrect.<br>
+Try again: 8 X 1 = <strong>8</strong><br>
+Keep up the good work!<br>
+Would you like to continue (y/n)? <strong>y</strong><br>
+9 X 3 = <strong>93</strong><br>
+That is not right.<br>
+
+Try again: 9 X 3 = <strong>39</strong><br>
+Sorry.  The correct answer is 9 X 3 = 27<br>
+Would you like to continue (y/n)? <strong>n</strong><br>
+----- Session Summary -----<br>
+Correct answers: 2<br>
+Incorrect answers: 1<br>
+Percentage correct: 66.67%<br>
+</code>  
+
+<b> Note</b> : Every time your program reads input, it should print that input back to the user, followed by a newline so that your interaction appears exactly as above.  In environments other than SeaShell this will result in two copies of the user input being echoed.<br>
+<br><br>
+<strong>Public Test Files:</strong> <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/mgame.in">mgame.in</a>, <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/mgame.expect">mgame.expect</a>
+
+<hr>
+<h3>Assignment 5 Problem 4. <i>[10 Marks correctness File: redact.c]</i></h3>
+
+Write a C program <tt>redact.c</tt> that translates user input.<br>
+Your program must continue to call <tt>scanf()</tt> to read characters from the user until <tt>EOF</tt> is encountered.  Each character must be translated 
+according to the following rules, and printed to the screen.<br><br>
+
+<ol>
+<li> If the character is a letter, it must be printed in upper case.
+</li><li> If the character is a number (0-9), an asterisk (*) must be printed instead.
+</li><li> If the character is a double quote ("), a single quote (') must be printed instead.
+</li><li> If the character is the backslash "\" then it is skipped (not printed), and the next character is printed without any modifications.
+</li><li> Otherwise, the character is printed as-is.
+</li></ol>
+Example:<br>
+<strong>input :</strong> <tt>Hello Bob, your credit card number is 123456781234\5\6\7\8.</tt><br>
+<strong>output:</strong> <tt>HELLO BOB, YOUR CREDIT CARD NUMBER IS ************5678.</tt><br>
+<br>
+Note:  You should be printing characters as soon as you get them.  Do not attempt to save them.<br><br>
+
+<strong>Public Test Files:</strong> <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/redact.in">redact.in</a>, <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/redact.expect">redact.expect</a>
+
+<hr>
+<h3>Assignment 5 Problem 5. <i>[20 Marks correctness File: rpslk.c]</i></h3>
+
+In this question, you will implement an interactive <a href="http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock">Rock-Paper-Scissors-Lizard-Spock</a> game (see the webpage for details), which allows a human player to compete against a computer "bot".<br><br>
+
+To avoid ambiguity, we will use the letter K to represent Spoc<strong>K</strong>.<br><br>
+
+You must write the module <tt>rpslk.c</tt> that implements the interface provided in <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/rpslk.h"><tt>rpslk.h</tt></a>.<br><br>
+
+We have provided you with <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/play-rpslk.c"><tt>play-rpslk.c</tt></a> to start the game.  It requires a <tt>rpslk-bot</tt> module (<a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/rpslk-bot.h" <tt="">rpslk-bot.h</a> and <tt>rpslk-bot.o</tt> (<a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/mac/rpslk-bot.o">Mac Lab</a> | <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/seashell/rpslk-bot.o">SeaShell</a> | <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/vb/rpslk-bot.o">RunC</a>) which is also provided for you.  The <tt>rpslk-bot</tt> ("game") module requires your <tt>rpslk</tt> module.<br><br>
+
+At the start of the game, the user will be prompted to set the bot's challenge rating.  This will be done by calling your <tt>get_challenge_rating()</tt> function.  Your function will print the following message and read in an integer with <tt>scanf</tt>:<br><br>
+
+<tt>"Choose a challenge rating (1 - 1000000): "</tt> (space after :, no newline)<br><br>
+
+You do not have to check for invalid inputs.  The bot will handle this for you.<br><br>
+
+Pro Tip: If a user enters a rating of 1, the bot will always lose.  If a user enters a rating of 1000000, the bot will never lose :).  The challenge rating is also used by the bot as a seed.<br><br>
+
+At the start of each round, the game module will call your <tt>get_player_throw()</tt> function to prompt the user for his/her throw.  Your function must print the following message:<br><br>
+
+<tt>"What do you throw (r/p/s/l/k)? "</tt> (space after ?, no newline)<br><br>
+
+Your function will then use <tt>scanf</tt> until a valid character (r/p/s/l/k) is read.<br><br>
+
+After the player has entered his/her choice, the game module will call your <tt>rpslk_winner</tt> function that will decide who wins the round, update the game statistics, and display the victory message.<br><br>
+
+If the player threw "rock" and the bot threw "paper", The corresponding victory message is:<br><br>
+
+<tt>"Paper covers rock. Bot wins!\n"</tt><br><br>
+
+The provided <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/messages.txt"><tt>messages.txt</tt></a> includes the various victory messages (you can copy these messages into your code to avoid typos).<br><br>
+
+After each round, the game module will call your <tt> get_play_again_response()</tt> function to prompt the user to play again (similarly to <tt>get_player_throw</tt>):<br><br>
+
+<tt>"Would you like to play again (y/n)? "</tt> (space after ?, no newline)<br><br>
+
+If the player chooses <tt>'n'</tt>, the game module will call your <tt>print_game_summary()</tt> function to print a game summary, which includes the number of rounds won by the player, the number of rounds won by the computer, and the overall winner of the game.  For example, if the player wins 8 rounds and the bot (computer) wins 10 rounds, your program will print the following summary (see the messages file):<br><br>
+
+<code>
+----- Game Summary -----<br>
+Player won 8 rounds...<br>
+Bot won 10 rounds...<br>
+Player and bot tied 0 rounds...<br>
+Bot wins!<br>
+</code><br>
+
+Have fun!<br><br>
+
+Note:  You cannot predict the bot's actions, so you cannot use the SeaShell testing framework.  The only way you would know the "expected" output would be to run your code.  It is pointless to run your code and then copy its output into a .expect file.  It will obviously pass, but it might not actually be the correct output.<br>
+
+Note: You are allowed define global mutable variables as needed for this problem (but you are only allowed to assign to them in functions where this effect has been documented).  
+
+<br><br>
+<strong>Public Test Files:</strong> <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/rpslk.in">rpslk.in</a>, <a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/rpslk.expect">rpslk.expect</a>
+
+<hr>
+<!-- [BEGIN] Problem 6 -->
+<h3>Assignment 5 Problem 6. <i>[15 Marks correctness File: test-date.zip containing test-date.in and test-date.expect]</i></h3>
+Your friend, John Q. Fakename (pronounced "Fay-key-nah-may") has just started a co-op term after finishing CS 136 in his 1B semester.  His first project is to create a module for working with dates (for some reason the company wants to create their own rather than simply using existing modules).<br><br>
+Here is what John has written so far:<br>
+<ul>
+<li><tt><a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/date.h">date.h</a></tt>
+</li><li><tt><a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/date.c">date.c</a></tt>
+</li></ul>
+Sadly, John always relied on the basic tests during CS135 and CS136, and he managed to do well anyway.  He has no idea how to go about testing his own code.
+Since he knows you created a similar module as part of your Assignment 2, he asks you for help testing his code.  Because he's not totally inconsiderate, he has created an
+interactive testing program for you, in <tt><a href="https://www.student.cs.uwaterloo.ca/~cs136/assignments/a5/test-date.c">test-date.c</a></tt>.  His company uses a testing system that is very similar to the testing features in SeaShell, so all you need to do to help him out is create an input file (a <tt>.in</tt> file) and and a corresponding expected output file (a <tt>.expect</tt> file) that will work with this interactive testing program.
+<br><br>
+For this question, submit <tt>test-date.zip</tt> containing:
+<ol>
+<li> <tt>test-date.in</tt>
+</li><li> <tt>test-date.expect</tt>
+</li></ol>
+Your tests must be correct (a correct implementation will pass all of your tests) and they must also be comprehensive (an incorrect implementation will fail at least one test).
+<br><br>
+<strong>Do not modify the interactive testing program <tt>test-date.c</tt>!</strong>.  Note that you cannot assume the implementation is error-free (this is why John asked for your help in the first place).
+
+</ul></body></html>

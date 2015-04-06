@@ -1,0 +1,128 @@
+*********************************************** 
+ * Jiayu Zhou
+ * CS136, Winter 2015
+ * Assignment 3, Problem 6
+***********************************************
+
+ere is an example:
+
+=================================================
+<Function_name>:
+  <parameter1_name>: <parameter1_value>
+  <parameter2_name>: <parameter2_value>
+  ...
+  <local_constant1_name>: <local_constant1_value>
+  ...
+  return addr: <function name> : <line number>
+=================================================
+
+a)
+=========================
+cow:
+  i: 3
+  return addr: noise:26
+=========================
+noise:
+  j: 3
+  s: 'c'
+  return addr: barn:39
+=========================
+barn:
+  k: 3
+  sound: 'c'
+  return addr: farminacci:46
+=========================
+farminacci:
+  n: 4
+  return addr: main:54
+=========================
+main:
+  f: 4
+  return addr: OS
+=========================
+
+b)
+=========================
+sheep:
+  i: 1
+  return addr: noise:22
+=========================
+noise:
+  j: 1
+  s: 's'
+  return addr: barn:39
+=========================
+barn:
+  k: 1
+  sound: 's'
+  return addr: farminacci:46
+=========================
+farminacci:
+  n: 2
+  return addr: pig:12
+=========================
+pig:
+  i: 2
+  return addr: noise:24
+=========================
+noise:
+  j: 2
+  s: 'p'
+  return addr: barn:39
+=========================
+barn:
+  k: 2
+  sound: 'p'
+  return addr: farminacci:46
+=========================
+farminacci:
+  n: 3
+  return addr: cow:7
+=========================
+cow:
+  i: 3
+  return addr: noise:26
+=========================
+noise:
+  j: 3
+  s: 'c'
+  return addr: barn:39
+=========================
+barn:
+  k: 3
+  sound: 'c'
+  return addr: farminacci:46
+=========================
+farminacci:
+  n: 4
+  return addr: main:54
+=========================
+main:
+  f: 4
+  return addr: OS
+=========================
+
+c)
+=========================
+pig:
+  i: 2
+  return addr: noise:24
+=========================
+noise:
+  j: 2
+  s: 'p'
+  return addr: barn:39
+=========================
+barn:
+  k: 2
+  sound: 'p'
+  return addr: farminacci:46
+=========================
+farminacci:
+  n: 4
+  return addr: main:54
+=========================
+main:
+  f: 4
+  return addr: OS
+=========================
